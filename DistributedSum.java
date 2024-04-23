@@ -1,3 +1,4 @@
+
 //DS Assignment 3: Develop a distributed system, to find sum of N elements in an array by distributing N/n elements to n number of processors MPI or OpenMP. Demonstrate by displaying the intermediate sums calculated at different processors.
 
 import mpi.*;
@@ -42,18 +43,26 @@ public class DistributedSum {
     }
 }
 
-/*Output:
-C:\Users\dell\desktop>javac -cp "C:\Users\dell\Downloads\mpj-v0_44\mpj-v0_44\lib\mpj.jar" DistributedSum.java
+/*Steps to run assignment no 3* 
 
-C:\Users\dell\desktop>"C:\Users\dell\Downloads\mpj-v0_44\mpj-v0_44\bin\mpjrun.bat" -np 6 DistributedSum
+1. Download & extract jar file in home directory from below link
 
-Number of Processes Entered: 6
-Intermediate Sums:
-Process 0: 3
-Process 1: 7
-Process 2: 11
-Process 3: 15
-Process 4: 9
-Process 5: 10
-Total Sum: 55
-*/
+https://sourceforge.net/projects/mpjexpress/
+
+2. Open terminal in home directory & type below command 
+
+sudo gedit ~/.bashrc
+
+3. Add below 2 lines in opened bash rc 
+
+export MPJ_HOME="/home/pvg/mpj-v0_44"
+
+export PATH=$MPJ_HOME/bin:$PATH
+
+
+4. Compile and run assignment 3 using below commands 
+
+javac -cp "/home/pvg/mpj-v0_44/lib/mpj.jar" DistributedSum.java
+
+
+mpjrun.sh -np 6 DistributedSum */
